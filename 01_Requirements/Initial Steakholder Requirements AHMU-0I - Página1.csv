@@ -1,0 +1,11 @@
+Initial Steakholder Requirements AHMU-0I,,
+ID,Requirement,Deliverable
+R-01,The 3V3 and GND power connections are clearly labeled and have no direct connection to an external power supply.,Schematic review / electrical rules check (ERC)
+R-02,The NTC channel uses a thermistor rated at 10 kΩ at 25 °C. Provide the output voltage as a function of temperature from 0 to 60 °C.,Calculations + LTspice + Octave
+R-03,"The ADC filter uses R = 1 kΩ and C = 100 nF, with a nominal cutoff frequency of approximately 1.59 kHz.",Calculations + AC and transient analyses
+R-04,"In the ideal model, an open-circuit NTC and a short-circuit NTC produce distinguishable voltage levels.",LTspice simulations + test cases
+R-05,The CAN interface uses a 3.3 V transceiver and provides selectable 120 Ω termination.,Datasheet + schematic review checklist
+R-06,"All nets are connected, and any errors reported by ERC or DRC have a documented justification.",ERC and DRC reports
+R-07,"The bill of materials (BOM), Gerber files, native design files, assembly drawing, and 3D model are available.",File inspection
+R-08,The telemetry logic uses a nominal period of 100 ms and includes a defined timeout-based diagnostic.,Python unit test using a mock (actual timing remains unverified)
+R-09,Each requirement has supporting evidence or is marked “Future physical test.”,Traceability matrix
